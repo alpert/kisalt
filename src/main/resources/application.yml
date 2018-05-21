@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: kisalt
+
+kisalt:
+  domain: http://localhost
+  redis.sequence: KISALT_ID_SEQUENCE
+  api.version: /v1
+  username: alpert
+  password: alpert
