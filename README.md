@@ -33,7 +33,10 @@ $ docker run --name redis-app -v redis:/data redis redis-server --appendonly yes
 
 Then build docker image for kisalt and run it:
 ```bash
-$ docker build -t kisalt .
+# Build yoursels
+$ docker build -t kisalt . 
+# or pull from docker hub
+$ docker pull alpert/kisalt
 $ docker run --name kisalt --link redis-app:redis -p 8080:8080 kisalt --spring.redis.host=redis
 # You can run another as:
 $ docker run --name kisalt-1 --link redis-app:redis -p 8081:8080 kisalt --spring.redis.host=redis
